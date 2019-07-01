@@ -15,13 +15,17 @@ const links = `https://www.google.com/
 https://gopher.it/
 https://mlh.io/`;
 class App extends React.Component {
-  onSubmit() {
-    links.split(/\n/).forEach(link => {
+  state = {
+    links: ""
+  };
+
+  onSubmit = () => {
+    this.state.links.split(/\n/).forEach(link => {
       if (link) {
         window.open(link, "_blank");
       }
     });
-  }
+  };
 
   render() {
     return (
@@ -36,10 +40,11 @@ class App extends React.Component {
                 <b>Enter your links here</b>:
               </span>
             }
-            charCount={false}
-            maxLength={100}
             invalidText="A valid value is required"
             placeholder={links}
+            onChange={e =>
+              this.setState({ ...this.state, links: e.target.value })
+            }
           />
         </div>
         <Button style={{ marginTop: 20 }} onClick={this.onSubmit}>
