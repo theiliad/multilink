@@ -72,7 +72,7 @@ class App extends React.Component {
             Gopher Labs
           </Link>{" "}
           using{" "}
-          <Link href="https://gopher.it" target="_blank">
+          <Link href="https://carbondesignsystem.com" target="_blank">
             Carbon Components
           </Link>
         </div>
