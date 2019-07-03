@@ -11,6 +11,8 @@ import {
 
 import "./style.css";
 
+import POPUP_BLOCKED from "./popup_blocked.jpg";
+
 const links = `https://www.google.com/
 https://gopher.it/
 https://mlh.io/`;
@@ -55,10 +57,8 @@ class App extends React.Component {
         <Accordion>
           <AccordionItem title="New tabs were blocked by my browser...!? 🙁">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              In your browser, please allow the app to open multiple new tabs.
+              <img src={POPUP_BLOCKED} style={{ marginTop: 10 }} />
             </p>
           </AccordionItem>
           <AccordionItem title="How does this work?">
